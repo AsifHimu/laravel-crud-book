@@ -1,0 +1,23 @@
+git clone
+mv .env.example .env
+ceate database from the .env file
+composer install
+php artisan key:generate
+php artisan migrate if needed
+php artisan serve
+
+----
+1.User request
+2.Route to appropriate laravel controller
+3.Interact with data model and do query
+4.Invokes the result in view
+5.View to user browser
+----
+php artisan make:model Book
+php artisan make:controller BookController
+php artisan make:migration create_books_table
+-----
+Seeding---
+php artisan make:factory BookFactory --model=Book
+php artisan make:seeder BookSeeder
+php artisan db:seed
