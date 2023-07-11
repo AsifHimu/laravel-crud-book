@@ -21,3 +21,7 @@ Seeding---
 php artisan make:factory BookFactory --model=Book
 php artisan make:seeder BookSeeder
 php artisan db:seed
+
+In BookSeeder---->Book::factory()->count(10)->create();
+In DatabaseSeeder---->$this->call(BookSeeder::class);
+
